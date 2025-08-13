@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<body>
+    <p>How many fingers i am holding up?</p>
+    <input type="text" id="guessInput">
+    <button id="guess">Check</button>
+
+    <script type="text/javascript">
+      document.getElementById("guess").onclick = function() {
+    
+    var randomNumber = Math.random()
+    randomNumber= Math.floor(randomNumber*5)
+
+    var inputValue = document.getElementById("guessInput").value;
+    if( inputValue == randomNumber) {
+        alert("You guessed it right!"+ randomNumber);
+    } else {
+        alert("Wrong guess! The correct number was " + randomNumber);
+}
+      }
+
+    </script>
+   
+</body>
+</html>
